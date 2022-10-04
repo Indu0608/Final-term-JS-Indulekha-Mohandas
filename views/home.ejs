@@ -1,0 +1,37 @@
+<%- include('_layouts/header') -%>
+    <h1>Order Request</h1>
+    <% if(typeof result !="undefined" ) { %>
+        <% for(let error of result) { %>
+            <p class="danger">
+                <%=error.msg%>
+            </p>
+            <% } %>
+                <% } %>
+                    <!--Request form for juice order-->
+                    <form action="/addorder" method="post" enctype="multipart/form-data">
+                        <div class="request-group">
+                            <div>
+                                <label for="userName">Name :</label>
+                                <input type="text" name="userName" placeholder="Full Name" autofocus autocomplete="off">
+                            </div>
+                            <div>
+                                <label for="userPhone">Phone :</label>
+                                <input type="text" name="userPhone" placeholder="XXX-XXX-XXXX" autocomplete="off">
+                            </div>
+                            <div>
+                                <label for="mangojuice">Mango Juice:</label>
+                                <input type="text" class="juices" name="mangojuice" autocomplete="off">
+                            </div>
+                            <div>
+                                <label for="berryjuice">Berry Juice:</label>
+                                <input type="text" class="juices" name="berryjuice" autocomplete="off">
+                            </div>
+                            <div>
+                                <label for="applejuice">Apple Juice:</label>
+                                <input type="text" class="juices" name="applejuice" autocomplete="off">
+                            </div>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+
+                    <%- include('_layouts/footer') -%>

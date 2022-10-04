@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name='viewport' content="width=device-width, initial-scale=1" charset="utf-8">
+  <title>Indus Juice Shop</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <!--Main Navigation bar with title, logo and other pages-->
+  <nav>
+    <div class="container">
+      <h1 class="mainHeading">Indu's Juice Shop</h1>
+    </div>
+    <ul>
+      <li id="home"><a href="/">Order Juices</a></li>
+      <% if(typeof session.isauthenticated !="undefined" ){ %>
+        <% if(session.isauthenticated){ %>
+          <a href="/Dashboard">View Orders</a>
+          <a href="/logout">Logout</a>
+          <% } else { %>
+            <li id="login"><a href="/login">Login</a></li>
+            <% } %>
+              <% } else {%>
+                <li id="login"><a href="/login">Login</a></li>
+                <% } %>
+    </ul>
+    </div>
+  </nav>
+
+<body>

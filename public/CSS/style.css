@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond';
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.orderDetail,
+a {
+    font-family: 'Garamond';
+    color: #1A3C40;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 20px;
+}
+
+label {
+    display: inline-block;
+    clear: left;
+    width: 100px;
+    text-align: right;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+input {
+    display: inline-block;
+}
+
+.orderDetail {
+    font-size: 30px;
+}
+
+.juicedetail {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mainHeading {
+    display: inline;
+    font-size: 300%;
+    font-weight: bolder;
+}
+
+body {
+    background-color: #EDE6DB;
+    /* center the body in the browser */
+    width: 1200px;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #EDE6DB;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #EDE6DB;
+}
+
+
+nav {
+    background-color: #417D7A;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a,
+nav p {
+    color: #EDE6DB;
+    padding: 0 3rem;
+    font-size: 150%;
+    font-weight: bolder;
+    transition-duration: .5s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a:hover,
+nav p:hover {
+    color: #adbcc0
+}
+
+button[type="submit"] {
+    font-size: 100%;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 20%;
+    cursor: pointer;
+    background-color: #417D7A;
+    color: aliceblue;
+    box-shadow: 9px 9px grey;
+    transition-duration: .5s;
+    font-family: 'Freestyle Script';
+}
+
+button[type="submit"]:hover {
+    background-color: #8dc4c1;
+    color: black;
+}
+
+button[type="submit"]:active {
+    box-shadow: 0 5px black;
+    transform: translateY(10px) translateX(10px);
+}
+
+li {
+    padding: 0 2% 0 2%;
+    display: inline-block;
+}
+
+table,
+tr,
+td,
+th {
+    border: 2px solid black;
+}
+
+table a {
+    color: blue;
+    font-weight: bolder;
+}
+
+table a:hover {
+    color: #1A3C40;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+.userimage {
+    width: 400px;
+    height: 400px;
+}
+
+footer {
+    margin-top: 15px;
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #417D7A;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 120%;
+    color: #fff;
+}
+
+
+footer:hover a {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: #417D7A;
+}
+
+
+form input {
+    font-size: 150%;
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.juices {
+    font-size: 150%;
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+}
+
+form button {
+    font-size: 150%;
+    margin: 2%;
+}
+
+
+.success {
+    color: rgb(33, 205, 33);
+    font-size: 200%;
+    font-style: italic;
+}
+
+.danger {
+    color: red;
+    font-size: 200%;
+    font-style: italic;
+}

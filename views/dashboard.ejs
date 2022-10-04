@@ -1,0 +1,55 @@
+<%- include('_layouts/header') -%>
+    <h2>Below are the details of all requests</h2>
+    <!--This is the dashboard page having a table with all information of the users-->
+    <form>
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Mango Juice</th>
+                    <th>Berry Juice</th>
+                    <th>Apple Juice</th>
+                    <th>Subtotal</th>
+                    <th>Tax</th>
+                    <th>Total</th>
+                    <th>Manage</th>
+                </tr>
+                <% if(orders.length>0){ let i = 0 ;%>
+                    <% for(let order of orders){ %>
+                        <tr>
+                            <td>
+                                <%=order.name %>
+                            </td>
+                            <td>
+                                <%=order.phone %>
+                            </td>
+                            <td>
+                                <%=order.mangojuice %>
+                            </td>
+                            <td>
+                                <%=order.berryjuice %>
+                            </td>
+                            <td>
+                                <%=order.applejuice %>
+                            </td>
+                            <td>
+                                $ <%=order.subtotal.toFixed(2) %>
+                            </td>
+                            <td>
+                                $ <%=order.tax.toFixed(2) %>
+                            </td>
+                            <td>
+                                $ <%=order.total.toFixed(2) %>
+                            </td>
+                            <!--Route to Delete-->
+                            <td>
+                                <a href="/Delete/<%=order._id %>">Delete</a>
+                            </td>
+                        </tr>
+                        <% } %>
+                            <% } %>
+            </table>
+        </div>
+    </form>
+    <%- include('_layouts/footer') -%>

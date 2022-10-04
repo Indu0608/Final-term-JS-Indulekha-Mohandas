@@ -1,0 +1,21 @@
+<%- include('_layouts/header') -%>
+    <!--Login page with Username and password-->
+    <form action="/login" method="post">
+        <div>
+            <label for="userName">Username :</label>
+            <input type="text" name="userName" placeholder="Username" autofocus autocomplete="off" required>
+        </div>
+        <div>
+            <label for="password">Password :</label>
+            <input type="password" name="password" placeholder="password" autocomplete="off" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <!--If its not Admin username/Password, throw error -->
+    <% if(typeof message !="undefined" ){ %>
+        <p class="danger">
+            <%=message %>
+        </p>
+
+        <% } %>
+            <%- include('_layouts/footer') -%>
