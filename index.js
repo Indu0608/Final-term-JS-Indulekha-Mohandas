@@ -151,6 +151,6 @@ myapp.get("/delete/:requestid", middleware, (req, res) => {
 })
 
 //Command to port 8080
-myapp.listen(8080, () => {
+myapp.listen(process.env.PORT || 8080, () => {
     console.log("Server started at port 8080.\nGo to http://localhost:8080");
 });
